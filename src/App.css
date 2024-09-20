@@ -1,38 +1,152 @@
-.App {
-  text-align: center;
+:root {
+  --padding-tb: 2rem;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+body {
+  font-family: "poppins";
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* Nav Bar */
+nav {
+  box-shadow: 0 2.98px 7.46px rgba(0, 0, 0, 0.1);
+  padding-block: var(--padding-tb);
   display: flex;
-  flex-direction: column;
+}
+
+.container {
+  padding-left: 2rem;
+}
+
+/* Content */
+main {
+  /* display: flex;
+  justify-content: start; */
+  padding-block: var(--padding-tb);
+}
+
+main .image-holder {
+  display: flex;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  padding-bottom: var(--padding-tb);
 }
 
-.App-link {
-  color: #61dafb;
+main .image {
+  max-width: 50%;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+main .info {
+  padding-block: var(--padding-tb);
+}
+
+main .info-header {
+  font-size: 36px;
+}
+
+main .info .info-data {
+  padding-block: var(--padding-tb);
+  max-width: 40%;
+  color: #222222;
+  line-height: 1.2rem;
+  font-weight: 300;
+}
+
+/* Card Section */
+
+.card-section {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  overflow-x: scroll;
+  scroll-behavior: smooth;
+  scroll-snap-type: x mandatory;
+}
+
+.card-section .card-holder {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  flex: 0 0 auto;
+  margin-right: 1.3rem;
+  box-shadow: 0 3px 7px rgba(0, 0, 0, 0.15);
+  border-radius: 5px;
+  margin-bottom: var(--padding-tb);
+  cursor: grab;
+  width: max(150px, 20vw);
+
+
+}
+
+.card-section .card-holder .card-img-holder {
+  position: relative;
+  /* max-width: fit-content; */
+}
+
+.card-section .card-holder .card-img-holder .image {
+  width: 100%;
+  border-radius: 5px;
+}
+
+.card-section .card-holder .card-img-holder .card-statue {
+  position: absolute;
+  top: 3%;
+  left: 3%;
+  font-size: 0.5rem;
+  background-color: #FFFFFF;
+  padding: 5px 10px;
+  border-radius: 2px;
+  text-transform: uppercase;
+}
+
+.card-section .card-holder .card-info {
+  margin-block: 0.3rem;
+  font-size: 12px;
+  padding: 10px;
+}
+
+.card-section .card-holder .card-info .card-rating {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+
+.card-section .card-holder .card-info .card-rating span {
+  margin-right: 3px;
+  font-weight: 200;
+}
+
+.card-section .card-holder .card-info .card-rating .star {
+  /* margin-right: 3px; */
+  /* display: flex;
+  justify-content: center;
+  align-items: center; */
+  text-align: center;
+  margin-top: 3px;
+}
+
+
+.card-section .card-holder .card-info .card-rating .star img {
+  max-width: 80%;
+}
+
+.card-section .card-holder .card-info .card-rating span:last-of-type {
+  color: #918E9B;
+}
+
+.card-section .card-holder .card-info .card-details {
+  color: #222222;
+  margin-top: 3px;
+  font-weight: 300;
+}
+
+.card-section .card-holder .card-info .card-price {
+  font-weight: 300;
+  margin-top: 3px;
 }
